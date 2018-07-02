@@ -25,6 +25,9 @@
 
           </div>
           <div class="navbar-end">
+            <div class="navbar-item">
+              {{ clientCount.toLocaleString() }} Users Online
+            </div>
             <a href="https://github.com/pRizz/iota-transaction-stream-front-end" class="navbar-item" target="_blank">
               <span class="icon">
                 <i class="fa fa-github"></i>
@@ -36,7 +39,7 @@
       </nav>
     </div>
 
-    <router-view/>
+    <router-view :clientCountCallback="clientCountCallback"/>
 
     <footer class="footer">
       <div class="container">
@@ -91,7 +94,13 @@
     name: 'App',
     data() {
       return {
-        navVisible: false
+        navVisible: false,
+        clientCount: 0
+      }
+    },
+    methods: {
+      clientCountCallback({ clientCount }) {
+        this.clientCount = clientCount
       }
     },
     mounted() {}

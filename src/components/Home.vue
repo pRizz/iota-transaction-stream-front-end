@@ -14,6 +14,7 @@
   export default {
     name: 'Home',
     components: {StreamControls, TransactionList},
+    props: ['clientCountCallback'],
     data() {
       return {
         transactions: [],
@@ -26,10 +27,14 @@
         iotaTransactionStreamPort: process.env.IOTA_TRANSACTION_STREAM_PORT,
         isIotaTransactionStreamSecured: process.env.IS_IOTA_TRANSACTION_STREAM_SECURED
       })
+
       this.transactionStreamSubscriber.setTransactionCallback(tx => {
-        if(!tx.hash) { return }
         this.transactions.unshift(tx)
         console.log(`got tx, `, tx)
+      })
+
+      this.transactionStreamSubscriber.eventEmitter.on('clientCount', (clientCount) => {
+        this.clientCountCallback({ clientCount })
       })
     }
   }
