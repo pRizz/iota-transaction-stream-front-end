@@ -1,5 +1,7 @@
 # iota-transaction-stream-front-end
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pRizz/iota-transaction-stream-front-end.svg)](https://greenkeeper.io/)
+
 A front end for an [IOTA Transaction Stream](https://www.npmjs.com/package/iota-transaction-stream)
 
 ![Screenshot](screenshots/itsfe.png)
