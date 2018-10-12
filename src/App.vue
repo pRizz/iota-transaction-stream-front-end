@@ -72,11 +72,11 @@
         <div class="has-text-centered">
           <p>If you like these apps and want to support me making more, please consider tipping me at these addresses:</p>
           <div>
-            IOTA: <code style="color: blue; overflow-wrap: break-word; ">WJKGMXJUQAKBBIVOFLEHUKOJLJFJVKOLFADHUIZAKBNHSWDAJAEIRQIWSFPKCLQG9TKXOSPBASN9MQGNWZJZYGYBAD</code>
+            IOTA: <code style="color: blue; overflow-wrap: break-word; ">{{ tipAddresses.IOTA }}</code>
           </div>
           <div>
             NANO:
-            <code style="color: blue; overflow-wrap: break-word;">xrb_1gtwryf4qkk51shi8tbyr988kqkc9cnadtm1xym3ito5sy948e4q4y8mfifd</code>
+            <code style="color: blue; overflow-wrap: break-word;">{{ tipAddresses.NANO }}</code>
           </div>
           <div>
             Thanks for your support!
@@ -90,12 +90,15 @@
 </template>
 
 <script>
+  import tipAddresses from 'prizz-tip-addresses'
+
   export default {
     name: 'App',
     data() {
       return {
         navVisible: false,
-        clientCount: 0
+        clientCount: 0,
+        tipAddresses
       }
     },
     methods: {
