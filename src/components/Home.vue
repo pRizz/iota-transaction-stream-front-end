@@ -1,6 +1,10 @@
 <template>
   <div class="container">
     <stream-controls :delegate="transactionStreamSubscriber"></stream-controls>
+    <br/>
+    <p>
+      <a href="http://www.iota-fountain.com/" target="_blank">Check out the IOTA Fountain transaction visualizer!</a>
+    </p>
     <transaction-list :transactions="transactions" :is-collapsed="true">
     </transaction-list>
   </div>

@@ -30,7 +30,7 @@
             </div>
             <a href="https://github.com/pRizz/iota-transaction-stream-front-end" class="navbar-item" target="_blank">
               <span class="icon">
-                <i class="fa fa-github"></i>
+                <i class="fab fa-github"></i>
               </span>
               <span>&nbsp;Github</span>
             </a>
@@ -54,7 +54,7 @@
               <p>View source code at
                 <a href="https://github.com/pRizz/iota-transaction-stream-front-end" class="button is-small" target="_blank">
                   <span class="icon">
-                    <i class="fa fa-github"></i>
+                    <i class="fab fa-github"></i>
                   </span>
                   <span>&nbsp;Github</span>
                 </a>

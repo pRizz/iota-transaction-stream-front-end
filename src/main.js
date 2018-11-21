@@ -10,9 +10,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Buefy from 'buefy'
-import 'buefy/lib/buefy.css'
+import 'buefy/dist/buefy.css'
 import AsyncComputed from 'vue-async-computed'
-import 'font-awesome/css/font-awesome.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import '@mdi/font/css/materialdesignicons.min.css'
 
 Vue.config.productionTip = false
 
